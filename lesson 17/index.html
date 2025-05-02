@@ -1,56 +1,97 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My website </title>
+        <title>My website of flowers</title>
     </head>
     <style>
         body {
             margin: 0;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
+ 
+         .topnav {
+ 
+            overflow:hidden;
+ 
+            background-color:#333;
+ 
+ 
+        }
+ 
+ 
+        .topnav a{
+ 
+            float:left;
+ 
+           color:mediumturquoise ;
+ 
+            text-align:center;
+ 
+            padding:14px 16px;
+ 
+            text-decoration:burlywood;
+ 
+            font-size:17px;
+ 
+        }
+ 
+        .topnav a:hover{
+ 
+            background-color:azure;
+ 
+            color:black;
+ 
+ 
+        }
+ 
+        .topnav a.active{
+   
+        background-color:ghostwhite;
+  
+        color:black;
 
-.topnav {
 
-overflow:hidden;
+   }
+body{
 
-background-color:#333;
+    background-color: #7929AB;
 
+}
+h1{
+
+    text-align: bold;
+
+    text-decoration: darkgoldenrod;
+
+    text-transform: capitalize;
+}
+
+.carousel-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 300px;
 
 }
 
+.myslides {
 
-.topnav a{
+    display: none;
 
-float:left;
+    max-height: 100%;
 
-color:mediumturquoise ;
-
-text-align:center;
-
-padding:14px 16px;
-
-text-decoration:burlywood;
-
-font-size:17px;
+    max-width: 100%;
 
 }
-
-.topnav a:hover{
-
-background-color:azure;
-
-color:black;
-
-
-}
-
-.topnav a.active{
-
-background-color:ghostwhite;
-
-color:black;
-
-
+p {
+    text-align: center;
+    font: bolder;
+    color: burlywood;
+    font-size: medium;
 }
        </style>
     <body>
@@ -61,5 +102,29 @@ color:black;
             <a href="gallery.html">gallery</a>
             <a href="contact us.html">contact us</a>
         </div>
+        <div class="carousel-container">
+            <img class="myslides" src="images/daisy.jpeg" height="300" width="400" alt="slider 1">
+            <img class="myslides" src="images/dandelions.jpg" height="400" width="400" alt="slider 2">
+            <img class="myslides" src="images/roses.jpeg" height="300" width="400" alt="slider 3">
+            <img class="myslides" src="images/sunflower.jpeg" height="300" width="400" alt="slider 4">
+        </div>
+        <p>Many more such type of flowers can be seen in the webpages</p>
+        <script>
+            var index = 0;
+            function carousel(){
+                var i;
+                var x = document.getElementsByClassName("myslides");
+                for (i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+                index++;
+                if (index > x.length){
+                    index = 1;
+                }
+                x[index-1].style.display = "block";
+                setTimeout(carousel, 2000);
+            }
+            carousel();
+        </script>
     </body>
 </html>
