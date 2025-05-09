@@ -2,6 +2,58 @@
 <html>
     <head>
         <title>Flower informations</title>
-    </head>
-    <body>this is about flower information and its type</body>
+    <style>
+        . {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{ 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.6;
+        }
+
+        .image-section {
+            background-image: url("https://th.bing.com/th/id/OIP.TCQB_78tGbDg2mwbWV6xeQAAAA?cb=iwp1&rs=1&pid=ImgDetMain");
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay-text {
+            color: slateblue;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(red, cyan, violet, 0.5);
+        }
+        .content-section {
+            background-color: darkcyan;
+            color: purple;
+            text-align: center;
+            padding: 60 px 20 px;
+        }
+        .content-section h1 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+    </style>
+    </head> 
+    <body>
+        <div class="image-section">
+            <div class="overlay-text">
+                informations about our website.
+            </div>
+        </div>
+        <div class="content-section">
+            <h1>information</h1>
+            <p>Flowers are not only beautiful; they play crucial roles in ecosystems, human culture, and agriculture, contributing to environmental balance, food production, and emotional well-being.</p>
+        </div>
+    </body>
 </html>
